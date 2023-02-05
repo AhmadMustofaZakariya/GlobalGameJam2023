@@ -15,6 +15,7 @@ public class CharacterController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
     // Update is called once per frame
+
     void FixedUpdate()
     {
         moveCharacter();
@@ -23,25 +24,19 @@ public class CharacterController : MonoBehaviour
     void moveCharacter()
 
     {
-        
         float horizontal = Input.GetAxis("Horizontal");
         Vector2 direction = new Vector2(horizontal, 0);
         rb.velocity = direction * speed;
+        animator.SetFloat("SPEED", horizontal);
     }
 
-    public void onlanding ()
-    {
-        animator.SetBool("JUMPING", false);
-    }
+
     void jumpCharacter()
     {
-        
-        
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = new Vector2(rb.velocity.x, jump);
             Debug.Log("JUMP!");
         }
-        
     }
 }

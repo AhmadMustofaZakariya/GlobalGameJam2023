@@ -22,6 +22,14 @@ public class LevelLoader : MonoBehaviour
 
         SceneManager.LoadScene(levelIndex);
     }
+    public void Credit()
+    {
+        SceneManager.LoadScene("Credit");
+    }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
 
     public void Gameplay()
     {
