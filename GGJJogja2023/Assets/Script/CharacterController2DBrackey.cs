@@ -14,6 +14,7 @@ public class CharacterController2DBrackey : MonoBehaviour
 	private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
+	public Vector3 position;
 
 	[Header("Events")]
 	[Space]
@@ -88,7 +89,10 @@ public class CharacterController2DBrackey : MonoBehaviour
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 		}
 	}
-
+	public void ResetPosition()
+    {
+		transform.position = position;
+    }
 
 	private void Flip()
 	{
