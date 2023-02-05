@@ -25,7 +25,7 @@ public class LevelLoader : MonoBehaviour
 
     public void Gameplay()
     {
-        SceneManager.LoadScene("Level1Gameplay");
+        SceneManager.LoadScene("Level 1 Main Gameplay");
     }
 
     public void Quit()
