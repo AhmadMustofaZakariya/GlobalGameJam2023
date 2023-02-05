@@ -22,4 +22,14 @@ public class LevelLoader : MonoBehaviour
 
         SceneManager.LoadScene(levelIndex);
     }
+
+    public void Gameplay()
+    {
+        SceneManager.LoadScene("Level1Gameplay");
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
